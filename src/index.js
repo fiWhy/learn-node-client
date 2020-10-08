@@ -1,3 +1,5 @@
+const { last } = require('lodash');
+
 const apiUrl = 'http://localhost:3000';
 
 const addBtn = document.getElementById('add'),
@@ -39,3 +41,5 @@ deleteBtn.addEventListener('click', () => {
     .then((response) => response.json())
     .then((data) => drawData(data, wrapper));
 });
+
+console.log(last([1, 2, 3]));
